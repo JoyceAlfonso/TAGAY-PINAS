@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home </title>
+    
+    <link rel="stylesheet" href="index.css">
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    
+
+   <style>
+    *{
+        padding: 0;
+        margin: 0;
+        text-decoration: none;
+        list-style: none;
+        box-sizing: border-box;
+    }
+    body{
+        font-family: montserrat;
+    }
+    nav{
+        background: whitesmoke;
+        height: 80px;
+        width: 100%;
+    }
+    label.logo{
+        color: black;
+        font-size: 35px;
+        line-height: 80px;
+        padding: 0 100px;
+        font-weight: bold;
+    }
+    nav ul{
+        float: right;
+        margin-right: 50px;
+        z-index:999;
+        
+
+    }
+    nav ul li{
+        display: inline-block;
+        line-height: 80px;
+        margin: 0 5px;
+    }
+    nav ul li a{
+        color: #000;
+        font-size: 17px;
+        padding: 7px 13px;
+        border-radius: 3px;
+        text-transform: uppercase;
+    }
+    a.active,a:hover{
+        background: rgb(81, 199, 81);
+        opacity: .80;
+        transition: .5s;
+    }
+    .checkbtn{
+        font-size: 30px;
+        color: #000;
+        float: right;
+        line-height: 80px;
+        margin-right: 40px;
+        cursor: pointer;
+        display: none;
+
+    }
+    #check{
+        display: none;
+    }
+
+    .cart-icon{
+        color: black;
+    }
+    .addtocartText{
+        color: black;
+        display: none;
+
+    }
+    
+    #Hero-banner {
+        height: 40;
+        background-color: green;
+        text-align: center;
+        color: white;
+        text-transform: uppercase;
+        font-weight: bold;  
+        padding: 5px;
+        overflow: hidden;
+        z-index: 1000;
+    }
+    #Hero-banner p{
+        text-wrap: nowrap;
+        animation: movingBanner 20s linear infinite;
+    }
+    @keyframes movingBanner{
+       0%{
+        transform: translateX(1200px);
+       }
+       50%{
+        transform: translateX(0);
+       }
+       100%{
+        transform: translateX(-1350px);
+       }
+       
+    }
+    .banner-container{
+        width: 100vw;
+        height: 70vh;
+        background: url("images/banner.png") no-repeat center/cover;
+        
+    }
+    .banner-text{
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        color: white;
+        padding-left: 20px;
+    }
+    .banner-text h4{
+       font-size: 50px;
+    }
+    .bannerbtn{
+        background-color: black;
+        color: white;
+        border-radius: 7px;
+        padding: 15px;
+        font-size: 15px;
+        margin-top: 2%;
+    }
+    .row{
+        display: flex;
+        flex-wrap: wrap
+    }
+    .container{
+        max-width: 1170px;
+       
+        margin: auto;
+    }
+    .footer{
+        background-color: black;
+        padding: 70px 0;
+        line-height: 1.5;
+    }
+    .footer-col{
+        width: 25%;
+        padding: 0 15px;
+
+    }
+    .footer-col h4{
+       font-size: 18px;
+       color: #fff;
+       text-transform: capitalize;
+       margin-bottom: 35px;
+       font-weight: 500;
+       position: relative;
+    }
+    .footer-col h4::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        background-color: #e91e63;
+        height: 2px;
+        box-sizing: border-box;
+        width: 50px;
+    }
+    .footer-col ul li:not(:last-child){
+        margin-bottom: 10px;
+    }
+    .footer-col ul li a{
+        font-size: 16px;
+        text-transform: capitalize;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 300;
+        color: #bbbbbb;
+        display: block;
+        transition: all 0.3s ease;
+    }
+    .footer-col ul li a:hover{
+        color: blue;
+        padding-left:8px;
+    }
+    .footer-col .social-link a{
+      display: inline-block;
+      height: 40px;
+      width: 40px;
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+    @media (max-width:1010px){
+        .footer{
+            display: block;
+        }
+        .footer-col{
+            color: white;
+        }
+    }
+    @media (max-width:952px){
+        label.logo{
+            font-size: 30px;
+            padding-left: 50px;
+        }
+        nav ul li a{
+            font-size: 16px;
+        }
+    }
+    @media (max-width:1010px){
+        .checkbtn{
+            display:block ;
+        }
+        ul{
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            background:green ;
+            top: 80px;
+            left: -100%;
+            transition: all .5s;
+            
+        }
+        nav ul li{
+            width: 100%;
+            display: block;
+            margin: 50px 0;
+            line-height: normal;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        nav ul li a{
+            font-size: 20px;
+        }
+        a:hover, a.active{
+            background: none;
+            color: pink;
+        }
+        #check:checked ~ ul{
+            left: 0;
+        }
+        .addtocartText{
+            display: block;
+        }
+        .banner-text{
+        top: 25%;
+        left: 0;
+        padding-left: 20px;
+       }
+       .banner-text h4{
+       font-size: 3rem;
+       }
+    }
+   </style>
+</head>
+<body>
+    <!--start of nav bar-->
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+         </label>
+        
+       <label class="logo">Traditional Drinks</label>
+        <ul>
+            
+            <li ><a href="#">Signin</a></li>
+            <li><a href="#">Login</a></li>
+           
+          <!--<li><span class="addtocartText">Add to Cart</span><i class="fa-solid fa-cart-shopping cart-icon"></i> </li>--> 
+        </ul>
+    </nav>
+    <!--End of navbar--> 
+    <div id="Hero-banner">
+      <p>Celebrate Paskong Pinoy with TLPD! Enjoy Exclusive Christmas Discounts, Holiday Bundles, and Special Deals on Traditional Filipino Drinks</p>
+    </div>
+    
+    <div class="banner-container"> 
+        
+        <div class="banner-text">
+             <h4>Celebrating Filipino Heritage Through Authentic Spirits</h4>
+             <button class="bannerbtn"><a href="login.html">Learn More..</a></button>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+               <div class="footer-col">
+                <h4>company</h4>
+                <ul>
+                    <li><a href="#">about us</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Products/Menu</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+               </div>
+               <div class="footer-col">
+                <h4>get help</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">shipping</a></li>
+                    <li><a href="#">returns</a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+               </div>
+               <div class="footer-col">
+                <h4>online shop</h4>
+                <ul>
+                    <li><a href="#">sbjdbsjbc</a></li>
+                    <li><a href="#">vskns</a></li>
+                    <li><a href="#">vsvs</a></li>
+                    <li><a href="#">vsvsv</a></li>
+                </ul>
+               </div>
+               <div class="footer-col">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"></a>
+                </div>
+               </div>
+               
+            </div>
+        </div>
+    </footer>
+
+     
+</body>
+</html>
