@@ -23,7 +23,7 @@
         font-family: montserrat;
     }
     nav{
-        background: whitesmoke;
+        background: rgb(128, 52, 52);;
         height: 80px;
         width: 100%;
     }
@@ -38,13 +38,14 @@
         float: right;
         margin-right: 50px;
         z-index:999;
-        
+      
 
     }
     nav ul li{
         display: inline-block;
         line-height: 80px;
         margin: 0 5px;
+        
     }
     nav ul li a{
         color: #000;
@@ -78,7 +79,37 @@
         display: none;
 
     }
-    @media (max-width:952px){
+   .header1{
+      background-color:#fff ;
+      text-align: center;
+      font-family:Arial, Helvetica, sans-serif;
+      display: inline-block;
+    } 
+    .p1{
+      text-align: center;
+      margin: 0;  
+    }
+    .message{
+        background-color: #fff;
+        font-family:Arial, Helvetica, sans-serif;
+        text-align: center;
+        }
+    .card{
+      justify-content: space-around;
+      height: 150px;
+      text-align: center;
+      border-radius: 15px;
+      background-color: #AFD198;
+      margin: 1px;
+      font-size: 18px;
+      font-family:Arial, Helvetica, sans-serif;
+    }
+
+    footer{
+      background-color: black;
+      height: 6px;
+     }
+     @media (max-width:952px){
         label.logo{
             font-size: 30px;
             padding-left: 50px;
@@ -110,6 +141,7 @@
             justify-content: center;
             align-items: center;
             gap: 10px;
+           
         }
         nav ul li a{
             font-size: 20px;
@@ -124,32 +156,12 @@
         .addtocartText{
             display: block;
         }
-    }
-   .header1{
-      background-color:#fff ;
-      text-align: center;
-      font-family:Arial, Helvetica, sans-serif;
-    } 
-    .p1{
-      text-align: center;
-      margin: 0;  
-    }
-    #welcome{
-    background-color: #fff;
-    font-family:Arial, Helvetica, sans-serif;
-    }
-    .card{
-      justify-content: space-around;
-      height: 150px;
-      text-align: center;
-      border-radius: 15px;
-      background-color: #AFD198;
-      margin: 1px;
-    }
-
-    footer{
-      background-color: black;
-      height: 6px; }
+      }
+      @media (max-width:1088px){
+        .card{
+            height: 200px;
+        }
+      }
     </style>
 </head>
 <body>
@@ -162,19 +174,16 @@
     
    <label class="logo">Traditional Drinks</label>
     <ul>
-        <li><a class="active" href="#">Home</a></li>
-        <li><a href="#">Signin</a>
-          
-        </li>
-        <li><a href="#">Shop Menu</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><span class="addtocartText">Add to Cart</span><i class="fa-solid fa-cart-shopping cart-icon"></i> </li>
+        <li><a href="#" style="text-decoration: none;">Home</a></li>
+        <li><a href="menu.html" style="text-decoration: none;">Product Menu</a></li>
+        <li><a href="about.html" style="text-decoration: none;">About Us</a></li>
+        <!--<li><span class="addtocartText">Add to Cart</span><i class="fa-solid fa-cart-shopping cart-icon"></i> </li> -->
     </ul>
 </nav>
   <!-- End of Navbar -->
   
    <div>
-      <center><h1 class="header1">Timplang Pinoy Liquor Depot Your Trusted Wholesale Partner Discover Cultural Alcoholic Drinks in the Philippines</h1> </center>  
+      <center><h1 class="header1" >Timplang Pinoy Liquor Depot Your Trusted Wholesale Partner Discover Cultural Alcoholic Drinks in the Philippines</h1> </center>  
       <img src="images/462461786_522573570410405_3192213998653099902_n.png" class="img-fluid" height="500px">
       
       <p class="p1">Explore traditional beverages that have deep cultural significance.</p>
@@ -182,7 +191,7 @@
 
   <div class="container-fluid" id="welcome">
         <h1 class="message">
-          <center>Welcome to Timplang Pinoy Liquor Depot!</center><br><center> Your premier source for traditional alcoholic drinks from the Philippines. Our selection celebrates the rich heritage and craftsmanship of Filipino brewers and distillers, bringing you authentic flavors that have been passed down through generations.</center>
+          Welcome to Timplang Pinoy Liquor Depot!<br>Your premier source for traditional alcoholic drinks from the Philippines. Our selection celebrates the rich heritage and craftsmanship of Filipino brewers and distillers, bringing you authentic flavors that have been passed down through generations.
         </h1>
        <!--<div class="container">
         <div class="box">Vision</div>

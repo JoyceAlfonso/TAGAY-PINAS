@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home </title>
+    <title>Product Menu</title>
     
-    <link rel="stylesheet" href="index.css">
-   
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/menu.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     
 
-   <style>
+   <!-- <style>
     *{
         padding: 0;
         margin: 0;
@@ -23,12 +23,12 @@
         font-family: montserrat;
     }
     nav{
-        background: whitesmoke;
+       
         height: 80px;
         width: 100%;
     }
     label.logo{
-        color: black;
+        color: #fff;
         font-size: 35px;
         line-height: 80px;
         padding: 0 100px;
@@ -38,7 +38,6 @@
         float: right;
         margin-right: 50px;
         z-index:999;
-        
 
     }
     nav ul li{
@@ -47,20 +46,22 @@
         margin: 0 5px;
     }
     nav ul li a{
-        color: #000;
+        color: #fff;
         font-size: 17px;
         padding: 7px 13px;
         border-radius: 3px;
         text-transform: uppercase;
     }
+    
     a.active,a:hover{
-        background: rgb(81, 199, 81);
+        background: #DAD4B5;
         opacity: .80;
         transition: .5s;
+        color: #000;
     }
     .checkbtn{
         font-size: 30px;
-        color: #000;
+        color: #DAD4B5;
         float: right;
         line-height: 80px;
         margin-right: 40px;
@@ -72,77 +73,8 @@
         display: none;
     }
 
-    .cart-icon{
-        color: black;
-    }
-    .addtocartText{
-        color: black;
-        display: none;
-
-    }
-    
-    #Hero-banner {
-        height: 40;
-        background-color: green;
-        text-align: center;
-        color: white;
-        text-transform: uppercase;
-        font-weight: bold;  
-        padding: 5px;
-        overflow: hidden;
-        z-index: 1000;
-    }
-    #Hero-banner p{
-        text-wrap: nowrap;
-        animation: movingBanner 20s linear infinite;
-    }
-    @keyframes movingBanner{
-       0%{
-        transform: translateX(1200px);
-       }
-       50%{
-        transform: translateX(0);
-       }
-       100%{
-        transform: translateX(-1350px);
-       }
-       
-    }
-    .banner-container{
-        width: 100vw;
-        height: 70vh;
-        background: url("images/banner.png") no-repeat center/cover;
-        
-    }
-    .banner-text{
-        position: absolute;
-        top: 25%;
-        left: 50%;
-        color: white;
-        padding-left: 20px;
-    }
-    .banner-text h4{
-       font-size: 50px;
-    }
-    .bannerbtn{
-        background-color: black;
-        color: white;
-        border-radius: 7px;
-        padding: 15px;
-        font-size: 15px;
-        margin-top: 2%;
-    }
-    .row{
-        display: flex;
-        flex-wrap: wrap
-    }
-    .container{
-        max-width: 1170px;
-       
-        margin: auto;
-    }
     .footer{
-        background-color: black;
+        background-color: #800000;
         padding: 70px 0;
         line-height: 1.5;
     }
@@ -183,7 +115,7 @@
         transition: all 0.3s ease;
     }
     .footer-col ul li a:hover{
-        color: blue;
+        color: #fff;
         padding-left:8px;
     }
     .footer-col .social-link a{
@@ -214,10 +146,10 @@
             display:block ;
         }
         ul{
-            position: fixed;
+           
             width: 100%;
             height: 100vh;
-            background:green ;
+            background:#800000;
             top: 80px;
             left: -100%;
             transition: all .5s;
@@ -238,7 +170,7 @@
         }
         a:hover, a.active{
             background: none;
-            color: pink;
+            color: #000;
         }
         #check:checked ~ ul{
             left: 0;
@@ -246,16 +178,9 @@
         .addtocartText{
             display: block;
         }
-        .banner-text{
-        top: 25%;
-        left: 0;
-        padding-left: 20px;
-       }
-       .banner-text h4{
-       font-size: 3rem;
-       }
+        
     }
-   </style>
+   </style> -->
 </head>
 <body>
     <!--start of nav bar-->
@@ -268,24 +193,146 @@
        <label class="logo">Traditional Drinks</label>
         <ul>
             
-            <li ><a href="#">Signin</a></li>
-            <li><a href="#">Login</a></li>
+            <li ><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><span class="addtocartText">Add to Cart</span><a href="cartpage.html" target="_blank"><i class="fa-solid fa-cart-shopping cart-icon"></i></a></li>
            
           <!--<li><span class="addtocartText">Add to Cart</span><i class="fa-solid fa-cart-shopping cart-icon"></i> </li>--> 
-        </ul>
+           
     </nav>
     <!--End of navbar--> 
-    <div id="Hero-banner">
-      <p>Celebrate Paskong Pinoy with TLPD! Enjoy Exclusive Christmas Discounts, Holiday Bundles, and Special Deals on Traditional Filipino Drinks</p>
+    <div class="wrapper">
+    <!--Search Bar and Categories Dropdpwn-->
+    <div class="search-bar">
+    <div class="box">
+        <input type="text" placeholder="Search...">
+        <a href="">
+            <i class="fas fa-search"></i>
+        </a>
     </div>
+    </div>  
+    <!--Categories-->
     
-    <div class="banner-container"> 
-        
-        <div class="banner-text">
-             <h4>Celebrating Filipino Heritage Through Authentic Spirits</h4>
-             <button class="bannerbtn"><a href="login.html">Learn More..</a></button>
+<center>
+    <div class="dropdown">
+       <button>Categories of  the Products</button> 
+        <div class="dropdown-content">
+            <a href="#">Local Spirits</a>
+            <a href="#">Infused and Specialty Liquors</a>
+            <a href="#">Local Cocktail Spirits</a>
+            <a href="#">Local Craft Spirits</a>
+            
         </div>
     </div>
+</center>
+    <!--product menu-->
+    <div class="card-container">
+        <div class="card">
+            <img src="images/agedlambanog.jpg">
+            <div class="card-content">
+                <h3>Lambanog</h3>
+                <p> Distilled from the finest, freshly harvested coconuts in the Tagalog region, Timplang Lambanog is a traditional Filipino spirit with a clean, smooth flavor that can be enjoyed straight or as the base for cocktails.</p>
+                <a href="" class="card-btn">Buy Now</a>
+                <a href="cartpage.html" class="cart-btn">Add to cart</a>
+            </div>
+        </div>
+   
+        <div class="card">
+            <img src="images/cashewwine.jpg">
+            <div class="card-content">
+                <h3> Cashew Wine</h3>
+                <p> The wild mulberries are handpicked, fermented, and carefully crafted to create a wine that is both refreshing and unique. This wine pairs wonderfully with Filipino dishes, cheese, or can be enjoyed on its own as a special treat.</p>
+                    
+                <a href="#" class="card-btn">Buy Now</a>
+                <a href="cartpage.html" class="cart-btn">Add to cart</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/bugnaywine.jpg">
+            <div class="card-content">
+                <h3> Bugnay Wine</h3>
+                <p> The wild mulberries are handpicked, fermented, and carefully crafted to create a wine that is both refreshing and unique. This wine pairs wonderfully with Filipino dishes, cheese, or can be enjoyed on its own as a special treat.</p>
+                    
+                <a href="#" class="card-btn">Read More..</a>
+                <a href="cartpage.html" class="cart-btn">Add to cart</a>
+            </div>
+        </div>
+       
+        <div class="card-container">
+            <div class="card">
+                <img src="images/mangowine.jpg">
+                <div class="card-content">
+                    <h3>Lambanog</h3>
+                    <p> Distilled from the finest, freshly harvested coconuts in the Tagalog region, Timplang Lambanog is a traditional Filipino spirit with a clean, smooth flavor that can be enjoyed straight or as the base for cocktails.</p>
+                    <a href="#" class="card-btn">Read More..</a>
+                    <a href="cartpage.html" class="cart-btn">Add to cart</a>
+                </div>
+            </div>
+       
+            <div class="card">
+                <img src="images/basisangria.jpg">
+                <div class="card-content">
+                    <h3>Basi Sangria</h3>
+                    <p>  A bottled cocktail made with Timplang Basi, mixed with tropical fruits for a refreshing and flavorful twist on the classic sangria.
+                    </p>
+                    <a href="#" class="card-btn">Read More..</a>
+                    <a href="cartpage.html" class="cart-btn">Add to cart</a>
+                    
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/tapuy.jpg">
+                <div class="card-content">
+                    <h3>Basi Sangria</h3>
+                    <p>  A bottled cocktail made with Timplang Basi, mixed with tropical fruits for a refreshing and flavorful twist on the classic sangria.
+                    </p>
+                    <a href="#" class="card-btn">Read More..</a>
+                    <a href="cartpage.html" class="cart-btn">Add to cart</a>
+                    
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/spicedrum.jpg">
+                <div class="card-content">
+                    <h3>Basi Sangria</h3>
+                    <p>  A bottled cocktail made with Timplang Basi, mixed with tropical fruits for a refreshing and flavorful twist on the classic sangria.
+                    </p>
+                    <a href="#" class="card-btn">Read More..</a>
+                    <a href="cartpage.html" class="cart-btn">Add to cart</a>
+                    
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/mojitolamnanog.jpg">
+                <div class="card-content">
+                    <h3>Basi Sangria</h3>
+                    <p>  A bottled cocktail made with Timplang Basi, mixed with tropical fruits for a refreshing and flavorful twist on the classic sangria.
+                    </p>
+                    <a href="#" class="card-btn">Read More..</a>
+                    <a href="cartpage.html" class="cart-btn">Add to cart</a>
+                    
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/sugarcanegold.jpg">
+                <div class="card-content">
+                    <h3>Basi Sangria</h3>
+                    <p>  A bottled cocktail made with Timplang Basi, mixed with tropical fruits for a refreshing and flavorful twist on the classic sangria.
+                    </p>
+                    <a href="#" class="card-btn">Read More..</a>
+                    <a href="cartpage.html" class="cart-btn">Add to cart</a>
+                    
+                </div>
+            </div>
+        </div>
+    
+        
+    </div>
+
+    
+    
+
+    
     <footer class="footer">
         <div class="container">
             <div class="row">
@@ -330,6 +377,6 @@
         </div>
     </footer>
 
-     
+</div>
 </body>
 </html>
