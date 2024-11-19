@@ -41,7 +41,7 @@
 .dropdown {
         position: relative;
         display: inline-block;
-        
+        color: #fff;
         text-align: center;
         justify-content: center;
         align-items: center;
@@ -51,7 +51,7 @@
     .dropdown button {
         margin-top: 20px;
         /* background-color: #3498db; */
-        color: black;
+        color: #fff;
         padding: 10px 20px;
         font-size: 16px;
         border: none;
@@ -59,9 +59,9 @@
         cursor: pointer;
     }
 
-    /* .dropdown button:hover {
+   .dropdown button:hover {
         background-color: #800000;
-    } */
+    } 
 
     /* Dropdown content (hidden by default) */
     .dropdown-content {
@@ -83,8 +83,10 @@
     }
 
     /* Change color on hover */
+   
     .dropdown-content a:hover {
         background-color: #800000;
+        color: #fff;
     }
 
     /* Show the dropdown content on hover */

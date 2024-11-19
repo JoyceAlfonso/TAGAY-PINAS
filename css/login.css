@@ -1,0 +1,227 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: montserrat;
+    background: #DAD4B5;
+  }
+  nav {
+    background: #800000;
+    height: 80px;
+    width: 100%;
+    z-index: 999;
+  }
+  label.logo {
+    color: #fff;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+  }
+  nav ul {
+    float: right;
+    margin-right: 50px;
+    z-index: 999;
+  }
+  nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+    color: #fff;
+  }
+  nav ul li a {
+    color: #fff;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+  }
+  .checkbtn {
+    font-size: 30px;
+    color: #DAD4B5;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+  #check {
+    display: none;
+  }
+  .wrapper {
+    width: 330px;
+    padding: 2rem 1rem;
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+  }
+  h1 {
+    font-size: 2rem;
+    color: #07001f;
+    margin-bottom: 1.2rem;
+  }
+  form input {
+    width: 92%;
+    outline: none;
+    border: 1px solid #fff;
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    background: #e4e4e4;
+  }
+  button {
+    width: 90%;
+    font-size: 1rem;
+    margin-top: 1.8rem;
+    padding: 10px 0; 
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    background: #982B1C;
+  }
+  button:hover {
+    background: #800000;
+  }
+  input:focus {
+    border: 1px solid;
+  }
+  .member {
+    font-size: 0.8rem;
+    margin-top: 1.4rem;
+    color: #636363;
+  }
+  .member a {
+    color: rgb(17, 107, 143);
+    text-decoration: none;
+  }
+  .recover {
+    text-align: right;
+    font-size: 0.7rem;
+    margin: 0.3rem 1.4rem 0 0; 
+  }
+  .recover a {
+    text-decoration: none;
+    color: #000;
+  }
+  .recover:hover {
+    color: red;
+  }
+  .footer {
+    background-color: #800000;
+    color: white;
+    padding: 20px 0;
+  }
+  .footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  .footer .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .footer-col {
+    flex: 1;
+    margin: 10px;
+    min-width: 200px;
+  }
+  .footer h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  .footer ul {
+    list-style: none;
+    padding: 0;
+  }
+  .footer ul li {
+    margin-bottom: 10px;
+  }
+  .footer ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  .footer ul li a:hover {
+    color: #00aced;
+  }
+  .social-links a {
+    color: white;
+    margin-right: 10px;
+    font-size: 20px;
+    display: inline-block;
+    transition: transform 0.3s;
+  }
+  .social-links a:hover {
+    transform: scale(1.2);
+  }
+  @media (max-width: 768px) {
+    .footer .row {
+      flex-direction: column;
+      align-items: center;
+    }
+    .footer-col {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .social-links {
+      margin-top: 15px;
+    }
+  }
+  @media (max-width: 1010px) {
+    .footer {
+      display: block;
+    }
+    .footer-col {
+      color: white;
+    }
+  }
+  @media (max-width: 952px) {
+    label.logo {
+      font-size: 30px;
+      padding-left: 50px;
+    }
+    nav ul li a {
+      font-size: 16px;
+    }
+  }
+  @media (max-width: 1010px) {
+    .checkbtn {
+      display: block;
+    }
+    ul {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: #800000;
+      top: 80px;
+      left: -100%;
+      transition: all .5s;
+    }
+    nav ul li {
+      width: 100%;
+      display: block;
+      margin: 50px 0;
+      line-height: normal;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+    nav ul li a {
+      font-size: 20px;
+    }
+    a:hover, a.active {
+      background: none;
+      color: red;
+    }
+    #check:checked ~ ul {
+      left: 0;
+    }
+  }

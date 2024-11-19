@@ -1,3 +1,7 @@
+<?php
+include('session_checker.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -189,83 +193,90 @@
         <label for="check" class="checkbtn">
             <i class="fas fa-bars"></i>
          </label>
-        
-       <label class="logo">Traditional Drinks</label>
+       
+        <label class="logo">
+         <img src="images/tpl.co.jpg" height="60" style="margin-left: 50px; margin-top: 10px;" >
+        </label>
+
         <ul>
-            
-            <li ><a href="about.html">About Us</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-            <li><span class="addtocartText">Add to Cart</span><a href="cartpage.html" target="_blank"><i class="fa-solid fa-cart-shopping cart-icon"></i></a></li>
-           
-          <!--<li><span class="addtocartText">Add to Cart</span><i class="fa-solid fa-cart-shopping cart-icon"></i> </li>--> 
+            <li><a href="index.php">Home</a></li>
+            <li ><a href="about.php">About Us</a></li>
+            <li><span class="addtocartText"></span><a href="cartpage.php"><i class="fa-solid fa-cart-shopping cart-icon"></i></a></li>
+            <li><span class="accountSetting"></span><a href="accountsetting.php"><i class="fa-solid fa-gear"></i></a></li>
            
     </nav>
     <!--End of navbar--> 
     <div class="wrapper">
-    <!--Search Bar and Categories Dropdpwn-->
-    <div class="search-bar">
-    <div class="box">
-        <input type="text" placeholder="Search...">
-        <a href="">
-            <i class="fas fa-search"></i>
-        </a>
-    </div>
-    </div>  
-    <!--Categories-->
+            <!--Search Bar and Categories Dropdpwn-->
+            <div class="search-bar">
+            <div class="box">
+                <input type="text" placeholder="Search...">
+                <a href="">
+                    <i class="fas fa-search"></i>
+                </a>
+            </div>
+            </div>  
+            <!--Categories-->
     
-<center>
-    <div class="dropdown">
-       <button>Categories of  the Products</button> 
-        <div class="dropdown-content">
-            <a href="#">Local Spirits</a>
-            <a href="#">Infused and Specialty Liquors</a>
-            <a href="#">Local Cocktail Spirits</a>
-            <a href="#">Local Craft Spirits</a>
-            
-        </div>
-    </div>
-</center>
-    <!--product menu-->
-    <div class="card-container">
-        <div class="card">
-            <img src="images/agedlambanog.jpg">
-            <div class="card-content">
-                <h3>Lambanog</h3>
-                <p> Distilled from the finest, freshly harvested coconuts in the Tagalog region, Timplang Lambanog is a traditional Filipino spirit with a clean, smooth flavor that can be enjoyed straight or as the base for cocktails.</p>
-                <a href="" class="card-btn">Buy Now</a>
-                <a href="cartpage.html" class="cart-btn">Add to cart</a>
-            </div>
-        </div>
-   
-        <div class="card">
-            <img src="images/cashewwine.jpg">
-            <div class="card-content">
-                <h3> Cashew Wine</h3>
-                <p> The wild mulberries are handpicked, fermented, and carefully crafted to create a wine that is both refreshing and unique. This wine pairs wonderfully with Filipino dishes, cheese, or can be enjoyed on its own as a special treat.</p>
+        <center>
+            <div class="dropdown">
+            <button>Categories of  the Products</button> 
+                <div class="dropdown-content">
+                    <a href="#">Local Spirits</a>
+                    <a href="#">Infused and Specialty Liquors</a>
+                    <a href="#">Local Cocktail Spirits</a>
+                    <a href="#">Local Craft Spirits</a>
+                    <a href="#">Seasonal Gift Sets</a>
+                    <a href="#">Regional Flavors </a>
+                    <a href="#">All Products</a>
                     
-                <a href="#" class="card-btn">Buy Now</a>
-                <a href="cartpage.html" class="cart-btn">Add to cart</a>
+                </div>
             </div>
-        </div>
-        <div class="card">
-            <img src="images/bugnaywine.jpg">
-            <div class="card-content">
-                <h3> Bugnay Wine</h3>
-                <p> The wild mulberries are handpicked, fermented, and carefully crafted to create a wine that is both refreshing and unique. This wine pairs wonderfully with Filipino dishes, cheese, or can be enjoyed on its own as a special treat.</p>
-                    
-                <a href="#" class="card-btn">Read More..</a>
-                <a href="cartpage.html" class="cart-btn">Add to cart</a>
-            </div>
-        </div>
-       
+        </center>
+      <!--product menu-->
         <div class="card-container">
+            <div class="card">
+                <img src="images/agedlambanog.jpg">
+                <div class="card-content">
+                    <h3>Aged Lambanog</h3>
+                    <h4>Price:PHP 550 (500ml)</h4>
+                    <p>Description: Timplang Aged Lambanog is a premium version of the traditional coconut spirit, aged in oak barrels to develop a richer, smoother flavor with hints of vanilla and caramel. Perfect for sipping or as a special gift.
+                    </p>
+                    <a href="" class="card-btn">Buy Now</a>
+                    <a href="cartpage.php" class="cart-btn">Add to cart</a>
+                </div>
+            </div>
+    
+            <div class="card">
+                <img src="images/cashewwine.jpg">
+                <div class="card-content">
+                    <h3> Cashew Wine</h3>
+                    <h4>Price: PHP 450 (500ml) </h4>
+                    <p>Timplang Cashew Wine is a unique Filipino wine crafted from the cashew fruit, a tropical delicacy that thrives in the Bicol region. This wine is made by fermenting ripe cashew fruits, which are carefully harvested to capture their natural flavors. </p>
+                    <a href="#" class="card-btn">Buy Now</a>
+                    <a href="cartpage.php" class="cart-btn">Add to cart</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/bugnaywine.jpg">
+                <div class="card-content">
+                    <h3> Bugnay Wine</h3>
+                    <h4>Price: PHP 550 (500ml)</h4>
+                    <p>Timplang Bugnay Wine is a traditional Filipino wine made from the wild Bugnay berries found in the mountainous regions of the Philippines. Known for its natural sweetness and vibrant color, Bugnay wine has been a part of Filipino culture for generations. </p>
+                    <a href="#" class="card-btn">Buy Now</a>
+                    <a href="cartpage.php" class="cart-btn">Add to cart</a>
+                </div>
+            </div>
+       
+       
             <div class="card">
                 <img src="images/mangowine.jpg">
                 <div class="card-content">
-                    <h3>Lambanog</h3>
-                    <p> Distilled from the finest, freshly harvested coconuts in the Tagalog region, Timplang Lambanog is a traditional Filipino spirit with a clean, smooth flavor that can be enjoyed straight or as the base for cocktails.</p>
-                    <a href="#" class="card-btn">Read More..</a>
-                    <a href="cartpage.html" class="cart-btn">Add to cart</a>
+                    <h3>Mango Wine</h3>
+                   <h4>Price: PHP 400 (500ml) </h4>
+                   <p>Description: Made from ripe mangoes sourced from the Bicol region, Timplang Mango Wine is a sweet, fruity wine with the unmistakable flavor of tropical mangoes, perfect for any occasion.</p>
+                    <a href="#" class="card-btn">Buy Now</a>
+                    <a href="cartpage.php" class="cart-btn">Add to cart</a>
                 </div>
             </div>
        
@@ -273,66 +284,82 @@
                 <img src="images/basisangria.jpg">
                 <div class="card-content">
                     <h3>Basi Sangria</h3>
-                    <p>  A bottled cocktail made with Timplang Basi, mixed with tropical fruits for a refreshing and flavorful twist on the classic sangria.
-                    </p>
-                    <a href="#" class="card-btn">Read More..</a>
-                    <a href="cartpage.html" class="cart-btn">Add to cart</a>
+                   <h4>Price: PHP 450 (500ml)</h4>
+                   <p>  A bottled cocktail made with Timplang Basi, mixed with tropical fruits for a refreshing and flavorful twist on the classic sangria.</p>
+                    <a href="#" class="card-btn">Buy Now</a>
+                    <a href="cartpage.php" class="cart-btn">Add to cart</a>
                     
                 </div>
             </div>
             <div class="card">
                 <img src="images/tapuy.jpg">
                 <div class="card-content">
-                    <h3>Basi Sangria</h3>
-                    <p>  A bottled cocktail made with Timplang Basi, mixed with tropical fruits for a refreshing and flavorful twist on the classic sangria.
+                    <h3>Tapuy</h3>
+                    <h4>Price: PHP 550 (500ml)</h4>
+                    <p> Timplang Tapuy is a rice wine that uses ancient brewing methods from the Cordillera region. It offers a smooth, slightly sweet flavor that’s perfect for both casual and ceremonial occasions.
                     </p>
-                    <a href="#" class="card-btn">Read More..</a>
-                    <a href="cartpage.html" class="cart-btn">Add to cart</a>
+                    <a href="#" class="card-btn">Buy Now</a>
+                    <a href="cartpage.php" class="cart-btn">Add to cart</a>
                     
                 </div>
             </div>
             <div class="card">
                 <img src="images/spicedrum.jpg">
                 <div class="card-content">
-                    <h3>Basi Sangria</h3>
-                    <p>  A bottled cocktail made with Timplang Basi, mixed with tropical fruits for a refreshing and flavorful twist on the classic sangria.
+                    <h3>Spiced Rum</h3>
+                    <h4>Price: PHP 600 (500ml) </h4>
+                    <p>Timplang Spiced Rum is a sugarcane-based rum infused with local spices, creating a smooth and aromatic rum perfect for sipping or mixing in your favorite cocktails.
                     </p>
-                    <a href="#" class="card-btn">Read More..</a>
-                    <a href="cartpage.html" class="cart-btn">Add to cart</a>
+                    <a href="#" class="card-btn">Buy Now</a>
+                    <a href="cartpage.php" class="cart-btn">Add to cart</a>
                     
                 </div>
             </div>
             <div class="card">
                 <img src="images/mojitolamnanog.jpg">
                 <div class="card-content">
-                    <h3>Basi Sangria</h3>
-                    <p>  A bottled cocktail made with Timplang Basi, mixed with tropical fruits for a refreshing and flavorful twist on the classic sangria.
+                    <h3>Mojito Lambanog</h3>
+                    <h4>Price: PHP 600 (500ml)</h4>
+                    <p> A ready-to-drink mojito made with Timplang Lambanog. This bottled cocktail is perfect for quick enjoyment—just chill, pour, and sip!
                     </p>
-                    <a href="#" class="card-btn">Read More..</a>
-                    <a href="cartpage.html" class="cart-btn">Add to cart</a>
+                    <a href="#" class="card-btn">Buy Now</a>
+                    <a href="cartpage.php" class="cart-btn">Add to cart</a>
                     
                 </div>
             </div>
             <div class="card">
                 <img src="images/sugarcanegold.jpg">
                 <div class="card-content">
-                    <h3>Basi Sangria</h3>
-                    <p>  A bottled cocktail made with Timplang Basi, mixed with tropical fruits for a refreshing and flavorful twist on the classic sangria.
+                    <h3>Timplang lambanog</h3>
+                    <h4>Price: PHP 600 (500ml)</h4>
+                    <p> Handcrafted from locally grown sugarcane, Timplang Sugarcane Gold is a rum distilled and aged to perfection, offering a clean and smooth experience that highlights the natural sugarcane flavor.
                     </p>
-                    <a href="#" class="card-btn">Read More..</a>
-                    <a href="cartpage.html" class="cart-btn">Add to cart</a>
+                    <a href="#" class="card-btn">Buy Now</a>
+                    <a href="cartpage.php" class="cart-btn" >Add to cart</a>
+                    
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/lambanoghome.jpeg">
+                <div class="card-content">
+                    <h3>Timplang Lambanog</h3>
+                    <h4>Price: PHP 600 (500ml)</h4>
+                    <p>  Distilled from the finest, freshly harvested coconuts in the Tagalog region, Timplang Lambanog is a traditional Filipino spirit with a clean, smooth flavor that can be enjoyed straight or as the base for cocktails.
+                    </p>
+                    <a href="#" class="card-btn">Buy Now</a>
+                    <a href="cartpage.php" class="cart-btn">Add to cart</a>
                     
                 </div>
             </div>
         </div>
     
-        
     </div>
-
-    
     
 
     
+    
+
+    <!--FOOTER-->
     <footer class="footer">
         <div class="container">
             <div class="row">
@@ -377,6 +404,5 @@
         </div>
     </footer>
 
-</div>
 </body>
 </html>
